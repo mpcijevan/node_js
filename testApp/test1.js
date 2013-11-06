@@ -11,6 +11,7 @@ var connection = mysql.createConnection({
     password : 'artak',
     database : 'test'
 });
+
 //comment example
 app.use(function(req, res, next) {
 
