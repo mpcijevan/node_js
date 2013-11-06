@@ -11,9 +11,11 @@ var connection = mysql.createConnection({
     password : 'artak',
     database : 'test'
 });
-
+//comment example
 app.use(function(req, res, next) {
+
     console.log(req.url);
+
     next();
 });
 
@@ -21,7 +23,7 @@ app.get('/hello', function(req, res, next) {
 
     connection.connect();
 
-    connection.query('SELECT * from users', function(err, rows, fields) {
+    connection.query('SELECT * from users', function(err, rows, fields){
         if (err) throw err;
 
         console.log('The solution is: ', rows[0].username);
