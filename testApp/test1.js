@@ -22,12 +22,13 @@ app.use(function(req, res, next) {
 app.get('/hello', function(req, res, next) {
 
     connection.connect();
+    connection.query('SELECT * from users', function(err, rows, fields) {
 
-    connection.query('SELECT * from users', function(err, rows, fields){
-        if (err) throw err;
+        if (err) {
+            throw err;
+        }
 
         console.log('The solution is: ', rows[0].username);
-
         var user = new user_module.user();
         user.set_age(12);
         user.set_nationality("Armenia");
@@ -37,7 +38,6 @@ app.get('/hello', function(req, res, next) {
         res.send();
     });
 
-    dg
     console.log("dfsgsag");
     connection.end();
 
