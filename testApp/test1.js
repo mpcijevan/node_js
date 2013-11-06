@@ -22,7 +22,9 @@ app.get('/hello', function(req, res, next) {
     connection.connect();
 
     connection.query('SELECT * from users', function(err, rows, fields) {
-        if (err) throw err;
+        if (err) {
+            throw err;
+        }
 
         console.log('The solution is: ', rows[0].username);
 
