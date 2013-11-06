@@ -35,7 +35,6 @@ app.get('/hello', function(req, res, next) {
         res.send();
     });
 
-    dg
     console.log("dfsgsag");
     connection.end();
 
