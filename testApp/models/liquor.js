@@ -9,7 +9,7 @@ exports.liquor = function()
     var brand;
     var size;
     var price;
-    var is_alcohol;
+    var is_alcohol;//0: false, 1: true
 
 
      this.get_name = function(){
@@ -51,6 +51,15 @@ exports.liquor = function()
     this.get_id = function(){
         return this.ID;
     }
+
+    this.get_is_alcohol = function(){
+        return this.is_alcohol;
+    }
+
+    this.set_is_alcohol = function(is_alcohol){
+        this.is_alcohol = is_alcohol;
+}
+
 
 };
 
